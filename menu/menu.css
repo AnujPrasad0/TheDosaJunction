@@ -86,7 +86,7 @@
 
 .menu-top {
     position: relative;
-    background: url('/assets/bg7.jpg');
+    background: url('../assets/bg7.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
