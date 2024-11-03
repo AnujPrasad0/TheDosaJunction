@@ -86,7 +86,7 @@
 
 .main-top {
     position: relative;
-    background: url(/assets/bg2.webp);
+    background: url('../assets/bg2.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -260,7 +260,7 @@ form>button:hover::before {
 /* contact */
 
 .contact {
-    background: url(/assets/bg6.png);
+    background: url('../assets/bg6.png');
     /* background-position: center 0; */
     background-repeat: no-repeat;
     background-size: cover;
