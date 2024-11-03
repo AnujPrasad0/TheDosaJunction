@@ -246,7 +246,7 @@
 
 .special::before {
     background-attachment: fixed;
-    background-image: url(/assets/bg5.png);
+    background-image: url('../assets/bg5.png');
 }
 
 .special::before {
@@ -385,7 +385,7 @@
 
 .journey {
     /* background: rgb(158, 15, 15); */
-    background: url(/assets/bg4.webp);
+    background: url('../assets/bg4.webp');
     background-position: center center;
     background-size: cover;
     position: relative;
@@ -435,7 +435,7 @@
 /* contact */
 
 .contact {
-    background: url(/assets/bg6.png);
+    background: url('../assets/bg6.png');
     /* background-position: center 0; */
     background-repeat: no-repeat;
     background-size: cover;
