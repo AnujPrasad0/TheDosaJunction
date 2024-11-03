@@ -86,7 +86,7 @@
 
 .menu-top {
     position: relative;
-    background: url(/assets/bg7.jpg);
+    background: url(../assets/bg7.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -284,7 +284,7 @@
 /* contact */
 
 .contact {
-    background: url(/assets/bg6.png);
+    background: url(../assets/bg6.png);
     /* background-position: center 0; */
     background-repeat: no-repeat;
     background-size: cover;
