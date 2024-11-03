@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    max-width: 1100px;
+    width: 100%;
+    position: relative;
+}
+
+.wrapper .carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100%/3) - 12px);
+    gap: 16px;
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: 0;
+    padding: 0;
+    margin: 0 2rem;
+}
+
+.wrapper .carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.wrapper .carousel :where(.card, .img) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.wrapper .carousel.no-transition {
+    scroll-behavior: auto;
+}
+
+.wrapper .carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.wrapper .carousel.dragging .card {
+    cursor: grab;
+    user-select: none;
+}
+
+.wrapper .carousel .card {
+    scroll-snap-align: start;
+    height: 250px;
+    list-style: none;
+    position: relative;
+    border: 2px solid rgb(26, 25, 25);
+    border-radius: 8px;
+    /* padding-bottom: 15px; */
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    cursor: pointer;
+    overflow: hidden;
+    width: 100%;
+}
+
+.wrapper .carousel .card img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    z-index: 0;
+}
+
+.wrapper .carousel .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.wrapper .carousel .card>* {
+    position: relative;
+    z-index: 2;
+    opacity: 1;
+}
+
+.wrapper .card h2 {
+    /* background: white; */
+    width: 100%;
+    color: #c39e59;
+    font-size: 1.8rem;
+    text-align: center;
+    /* margin: 0; */
+    font-family: "Alice", serif;
+    box-shadow: inset 10px 10px 20px 50px rgba(0, 0, 0, 0.7);
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    .wrapper .carousel {
+        grid-auto-columns: calc((100% / 2) - 12px);
+    }
+
+    .wrapper .card h2 {
+        font-size: calc(1rem + .6vw);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .wrapper .carousel {
+        grid-auto-columns: calc((100% / 2) - 10px);
+
+    }
+
+    .wrapper .card h2 {
+        /* font-size: 1rem; */
+        font-size: calc(.8rem + 1.8vw);
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .wrapper .carousel {
+        grid-auto-columns: 100%;
+
+    }
+
+    .wrapper .card h2 {
+        font-size: 2rem;
+    }
+}
