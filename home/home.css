@@ -85,7 +85,7 @@
 /* home */
 
 .home {
-    background: url(/assets/bg1.jpg);
+    background: url('../assets/bg1.jpg');
     background-size: cover;
 }
 
