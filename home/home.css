@@ -581,9 +581,10 @@
     font-size: .8rem;
 }
 
-.bottom p b {
+.bottom p a {
     color: #e7bd52;
     font-family: "Playfair Display", serif;
+    text-decoration: none;
 }
 
 
